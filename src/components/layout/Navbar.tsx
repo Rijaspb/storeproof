@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 
 const AUTH_LINKS = [
@@ -17,11 +18,16 @@ export default function Navbar() {
         className="mx-auto flex h-14 max-w-6xl items-center justify-between px-6"
         aria-label="Main navigation"
       >
-        <Link
-          href="/"
-          className="text-sm font-semibold tracking-tight text-(--foreground)"
-        >
-          StoreProof
+        <Link href="/" className="flex items-center gap-2">
+          <Image
+            src="/Storeproof_MainLogo.png"
+            alt=""
+            width={120}
+            height={20}
+            className="h-5 w-auto"
+            priority
+          />
+          <span className="text-sm font-semibold tracking-tight text-(--foreground)">StoreProof</span>
         </Link>
 
         {/* Desktop */}
