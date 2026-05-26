@@ -2,8 +2,17 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="flex flex-col items-center px-6 pb-24 pt-24 text-center">
+    <section className="relative flex flex-col items-center overflow-hidden px-6 pb-24 pt-24 text-center">
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 h-full w-full object-cover"
+        src="/hero_bg.mp4"
+      />
 
+      <div className="relative z-10 flex flex-col items-center">
       {/* Badge */}
       <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-(--border) px-3.5 py-1">
         <span className="h-1.5 w-1.5 rounded-full bg-(--foreground)" />
@@ -35,6 +44,7 @@ export default function Hero() {
         >
           See how it works
         </Link>
+      </div>
       </div>
 
     </section>
